@@ -1,4 +1,3 @@
-import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Image from "next/image";
 import { Orbitron, Montserrat } from "next/font/google";
 import styles from "./styles.module.css";

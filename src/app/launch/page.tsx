@@ -1,14 +1,17 @@
 import NavBar from "@/Components/NavBar";
 import Card from "@/Components/Card";
+import { Orbitron, Montserrat } from "next/font/google";
 import './App.css';
 
+const orbitron = Orbitron({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 export default function page() {
   return (
-    <div className="Launch">
+    <div className={`Launch ${orbitron.className}`}>
 
       <NavBar />
 
-      <div className="head">
+      <div className={`head ${montserrat.className}`}>
         <h1>Ethereum Market</h1>
         <div className="small-text">
           <div>

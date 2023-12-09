@@ -1,12 +1,14 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import './NavBar.css'
+import { Orbitron, Montserrat } from "next/font/google";
 import Image from 'next/image';
 
+const orbitron = Orbitron({ subsets: ["latin"] });
 export default function () {
   return (
-    <div className='Nav'>
+    <div className={`Nav ${orbitron.className}`}>
       <div className='left-nav'>
-        {/* <Image src='/assets/XtraLogo.png' width={30} height={10}  alt='X-tra' /> */}
+        
         <div id='logo'>X-TRA</div>
         <div className='dashboard-nav'>Dashboard</div>
       </div>

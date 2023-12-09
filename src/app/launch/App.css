@@ -5,7 +5,8 @@ body{
     color: #fff;
     background-color: rgb(24, 24, 40);
     background-color: #fff;
-  
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+    min-height:100vh;
     /* background-image: linear-gradient(#636363,#a2ab58); */
 }
 .head{    
@@ -35,6 +36,10 @@ h1{
     display: flex;
     justify-content: center;
     width: 100%;
+}
+.card-container h2{
+    font-weight: 600;
+    font-size: large;
 }
 .card{
     margin-left: 1vw;
@@ -84,12 +89,20 @@ h2{
     width: 15%;
 }
 button{
-    background: linear-gradient(to right, #e8cbb6,#cf9fa5);
-    box-shadow: 2px 2px #847477;
+    /* background: linear-gradient(to right, #e8cbb6,#cf9fa5); */
+    box-shadow: 1px 1px #DDDDDD;
     height: fit-content;
     padding: 2px 1.5vw;
     border-radius: 50px;
     padding: 1vh 2vw;
+    color: rgb(3, 54, 58);
+    font-weight: 500;
+}
+.supplyButton{
+    background: linear-gradient(to right, rgb(163, 217, 221) , rgb(174, 250, 182));
+}
+.borrowButton{
+    background: radial-gradient(circle at 10% 20%, rgba(91, 173, 254, 0.46) 0%, rgba(91, 224, 254, 0.46) 47.2%, rgba(170, 254, 235, 0.43) 90%);
 }
 .coin-head{
     display: flex;

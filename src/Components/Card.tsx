@@ -1,4 +1,8 @@
 import React from 'react'
+import { Orbitron, Montserrat } from "next/font/google";
+
+const orbitron = Orbitron({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 interface Card{
     title:String,
@@ -13,10 +17,10 @@ const coins = [
 
 export default function Card({title, button}:Card) {
   return (
-    <div className='card'>
+    <div className={`card ${montserrat.className}`}>
         <div className="part1">
             <h2>{title}</h2>
-            <div className='coin-head'  style={{maxWidth:'65%',justifyContent:'space-evenly'}}>
+            <div className='coin-head'  style={{maxWidth:'65%',justifyContent:'space-evenly',fontWeight:500}}>
                 <p>Asset</p>
                 <p>Balance</p>
                 <p>APY</p>
@@ -32,7 +36,7 @@ export default function Card({title, button}:Card) {
                             <p>{coin[2]}%</p>
                         </div>
                        
-                        <button>{button}</button>
+                        <button className={button=='Supply'?'supplyButton button':'borrowButton button'}>{button}</button>
                     </div>;
                     
                 })
