@@ -1,0 +1,26 @@
+.Nav{
+    background-color: rgb(20, 20, 31);
+    /* background-color: #31304D; */
+    color: #fff;
+    font-family: serif;
+    border-bottom: #fff solid 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2vh 0;
+}
+.left-nav{
+    /* background-color: #7c5555; */
+    margin: auto 3vw;
+    width: fit-content;
+    display: flex;
+}
+.right-nav{
+    /* background-color: aquamarine; */
+    display: flex;
+    width: fit-content;
+    margin-right: 1.5vw;
+}
+.dashboard-nav{
+    margin-left: 2vw;
+}
