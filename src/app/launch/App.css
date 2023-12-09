@@ -1,11 +1,16 @@
+body{
+    /* background: linear-gradient(0deg,#fff 10%, #B6509E 40%, #2EBAC6 83.41%, #fff 1%); */
+}
 .Launch{
     color: #fff;
-    background-color: rgb(16, 16, 24);
+    background-color: rgb(24, 24, 40);
     background-color: #fff;
+  
     /* background-image: linear-gradient(#636363,#a2ab58); */
 }
 .head{    
     background-color: rgb(16, 16, 24);
+    background: linear-gradient(to right,#22092C, #460000);
     /* background-color: #31304D; */
     width: 100%;
     height: 30vh;
@@ -64,7 +69,7 @@ h2{
     content: ' ';
     height: 1px;
     width: 100%;
-    background: linear-gradient(248.86deg,#fff 10%, #B6509E 40%, #2EBAC6 83.41%, #fff 1%);
+    background: linear-gradient(248.86deg,#fff 10%, #B6509E 40%, #d25706 83.41%, #fff 1%);
 }
 .coin{
     /* background-color: blue; */
@@ -79,7 +84,7 @@ h2{
     width: 15%;
 }
 button{
-    background: linear-gradient(to right, #F4BF96,#c3848c);
+    background: linear-gradient(to right, #e8cbb6,#cf9fa5);
     box-shadow: 2px 2px #847477;
     height: fit-content;
     padding: 2px 1.5vw;

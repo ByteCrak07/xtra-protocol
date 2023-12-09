@@ -1,9 +1,11 @@
 .Nav{
-    background-color: rgb(20, 20, 31);
-    /* background-color: #31304D; */
+    background-color: #b93030;
+    /* background: linear-gradient(to right, #77ebda 40%, #22afbb 60%);
+    background: linear-gradient(to right, #da8686,#e06f84); */
+    background: linear-gradient(#BE3144,#872341);
     color: #fff;
     font-family: serif;
-    border-bottom: #fff solid 1px;
+    /* border-bottom: #fff solid 1px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,13 +16,33 @@
     margin: auto 3vw;
     width: fit-content;
     display: flex;
+    align-items: center;
 }
 .right-nav{
     /* background-color: aquamarine; */
     display: flex;
     width: fit-content;
     margin-right: 1.5vw;
+    height: fit-content;
+    align-items: center;
 }
 .dashboard-nav{
     margin-left: 2vw;
+    color: #000;
+    font-size: 2.5vh;
+    display: none;
+}
+#logo{
+    background-color: #fff;
+    color: transparent;
+    background: url('https://media.giphy.com/media/88inhanctU1G4PEx7b/giphy.gif');
+    background-size: contain;
+    /* background-repeat:no-repeat; */
+    font-weight: 900;
+    font-size: 20px;    
+    background-clip:text;
+    -webkit-background-clip: text;
+    font: serif;
+    font-size: 4vh;
+    z-index: 2;
 }
