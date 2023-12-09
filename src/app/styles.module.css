@@ -1,0 +1,150 @@
+.heading{     
+    background-clip: text;     
+  -webkit-background-clip: text;
+    }
+.subheading{
+  font-size: 3vh;
+  /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+
+}
+.launchButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+width:300px;
+height:50px;
+border-radius: 60px;
+padding: 16px;
+color:white;
+margin-top: 16px;
+margin-right: 16px;
+background: radial-gradient(circle at 10% 50.5%, rgb(255, 107, 6) 0%, rgb(255, 1, 107) 90%);
+box-shadow: #D8D9DA 1px 2px;
+}
+.card{
+  width:20vw;
+  height:25vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+ background-color:transparent;
+}
+.odd{
+  animation: jumpAnimation1 8s ease-in-out infinite;
+}
+.even{
+  animation: jumpAnimation2 8s ease-in-out infinite;
+}
+.whyHeading{
+  font-size: 10vh;
+  font-weight: 800;
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  padding-left:4vw;
+  padding-top: 4vh;
+}
+.X{
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  font-size: 12vh;
+  font-weight: 500;
+  padding-left:4vw;
+
+  background-clip: text;     
+  -webkit-background-clip: text;
+  background-image:
+                url("https://media.giphy.com/media/88inhanctU1G4PEx7b/giphy.gif");
+                color:transparent ;
+                background-size: contain;
+}
+.wordSplit{
+color: transparent;
+font-size: 12vh;
+font-weight: 500;
+background: linear-gradient(96.2deg, rgb(255, 230, 112) 10.4%, rgb(255, 100, 100) 43.8%, rgb(0, 93, 219) 105.8%);
+background-clip: text;     
+-webkit-background-clip: text;
+margin-left: 10px;
+}
+.footer{
+  background-color: black;
+  color: white;
+  height:3vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.benefitCards{
+  width:50vw;
+  background: transparent;
+  border-color: #61677A;
+  padding:32;
+  display:flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: flex-end;
+margin-left: 5vw;
+gap:3vh
+}
+.benefitHeader{
+  font-size: 3vh;
+  font-weight: 700;
+}
+
+@keyframes jumpAnimation1 {
+  0%,  50%, 100% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(-10px);
+  }
+  20% {
+    transform: translateY(-15px);
+  }
+  30% {
+    transform: translateY(-25px);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(10px);
+  }
+  70% {
+    transform: translateY(15px);
+  }
+  80% {
+    transform: translateY(25px);
+  }
+  90% {
+    transform: translateY(15px);
+  }
+}
+@keyframes jumpAnimation2 {
+  0%,  50%, 100% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(-15px);
+  }
+  70% {
+    transform: translateY(-25px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  30% {
+    transform: translateY(15px);
+  }
+  20% {
+    transform: translateY(25px);
+  }
+  10% {
+    transform: translateY(15px);
+  }
+}
+
