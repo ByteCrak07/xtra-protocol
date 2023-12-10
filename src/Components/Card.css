@@ -1,3 +1,7 @@
+.card-container h2{
+    font-weight: 600;
+    font-size: large;
+}
 .card{
     margin-left: 1vw;
     z-index: 1;
@@ -46,12 +50,20 @@ h2{
     width: 15%;
 }
 button{
-    background: linear-gradient(to right, #e8cbb6,#cf9fa5);
-    box-shadow: 2px 2px #847477;
+    /* background: linear-gradient(to right, #e8cbb6,#cf9fa5); */
+    box-shadow: 1px 1px #DDDDDD;
     height: fit-content;
     padding: 2px 1.5vw;
     border-radius: 50px;
     padding: 1vh 2vw;
+    color: rgb(3, 54, 58);
+    font-weight: 500;
+}
+.supplyButton{
+    background: linear-gradient(to right, rgb(163, 217, 221) , rgb(174, 250, 182));
+}
+.borrowButton{
+    background: radial-gradient(circle at 10% 20%, rgba(91, 173, 254, 0.46) 0%, rgba(91, 224, 254, 0.46) 47.2%, rgba(170, 254, 235, 0.43) 90%);
 }
 .coin-head{
     display: flex;
@@ -62,4 +74,20 @@ button{
 .coin-head p{
     
     width: 35%;
+}
+
+option, select{
+    text-transform: capitalize;
+    width: 40%;
+}
+input[type=text]{
+    width: 40%;
+    border: #075275 solid 1px;
+    border-radius: 5px;
+    padding:0 4px;
+    margin: 1vh auto;
+}
+.amount{
+    text-align: center;
+    height: 5vh;
 }
