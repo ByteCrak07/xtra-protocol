@@ -1,8 +1,9 @@
-import React from 'react'
+import './Card.css'
 
 interface Card{
     title:String,
     button:String,
+    // ():void 
 }
 
 const coins = [
