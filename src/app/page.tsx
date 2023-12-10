@@ -7,7 +7,7 @@ const orbitron = Orbitron({ subsets: ["latin"] });
 const montserrat = Montserrat({ subsets: ["latin"] });
 function Page() {
   const coinsCard = [
-  
+
     {
       id: "2",
       iconName: "/assets/arbitrum.png",
@@ -36,7 +36,7 @@ function Page() {
       id: "6",
       iconName: "/assets/1inch.png",
     },
-   
+
   ];
 
   return (
@@ -62,9 +62,9 @@ function Page() {
           }}
         >
           {" "}
-          <Link href="/launch">  
-          <button className={styles.launchButton}>Launch App</button>   
-      </Link>
+          <Link href="/launch">
+            <button className={styles.launchButton}>Launch App</button>
+          </Link>
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}></div>
         <div
@@ -123,10 +123,10 @@ function Page() {
           {coinsCard.map((coin, index) => {
             return (
               <div
+                key={`${index}-coin-card`}
                 id={coin.id}
-                className={`p-6 rounded-lg  ${styles.card} ${
-                  index % 2 == 0 ? styles.odd : styles.even
-                }`}
+                className={`p-6 rounded-lg  ${styles.card} ${index % 2 == 0 ? styles.odd : styles.even
+                  }`}
               >
                 <Image
                   style={{ borderRadius: "50%" }}
@@ -170,7 +170,7 @@ function Page() {
         </div>
 
         <div
-         
+
           style={{
             display: "flex",
             flexDirection: "column",
