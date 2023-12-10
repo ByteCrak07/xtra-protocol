@@ -76,7 +76,7 @@ export default function Card({ title, button }: Card) {
 
                 coins.map((coin,index)=>{
                     
-                    return <div className='coin-data'>
+                    return <div className='coin-data' key={index+'supply'}>
                         <h3>{coin[0]}</h3>
                         <div className='coin'>
                             <p>{coin[1]}</p>
@@ -90,7 +90,7 @@ export default function Card({ title, button }: Card) {
                 :
                 borrow_coins.map((coin,index)=>{
                     
-                    return <div className='coin-data'>
+                    return <div className='coin-data' key={index+'borrow'}>
                         <h3>{coin[0]}</h3>
                         <div className='coin'>
                             <p>{coin[1]}</p>
