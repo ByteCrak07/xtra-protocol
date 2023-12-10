@@ -63,6 +63,7 @@ button{
     background: linear-gradient(to right, rgb(163, 217, 221) , rgb(174, 250, 182));
 }
 .borrowButton{
+    /* display: none; */
     background: radial-gradient(circle at 10% 20%, rgba(91, 173, 254, 0.46) 0%, rgba(91, 224, 254, 0.46) 47.2%, rgba(170, 254, 235, 0.43) 90%);
 }
 .coin-head{
@@ -79,6 +80,7 @@ button{
 option, select{
     text-transform: capitalize;
     width: 40%;
+    max-width: 200px;
 }
 input[type=text]{
     width: 40%;
@@ -86,8 +88,26 @@ input[type=text]{
     border-radius: 5px;
     padding:0 4px;
     margin: 1vh auto;
+    max-width: 100px;
+}
+.input-containert{
+    display: flex;
+    text-align: center;
+    height: 6vh;
+    justify-content: center;
+    align-items: center;
 }
 .amount{
-    text-align: center;
-    height: 5vh;
+    width: 90%;
+    height: 6vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    font-family: cursive;
+}
+.amount button{
+    padding: 0 2vw;
+    /* font-family: cursive; */
+    background: linear-gradient(to right, rgb(223, 167, 77) , rgb(181, 84, 60));
 }

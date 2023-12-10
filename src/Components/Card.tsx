@@ -20,6 +20,10 @@ const coins = [
     ['matic',0, 2],
     ['link',0, 0.6]
 ]
+const chains = [
+    ['Ethereum'],
+    ['polygon']
+]
 
 export default function Card({title, button}:Card) {
     const [input, setInput] = useState(0);
@@ -31,7 +35,7 @@ export default function Card({title, button}:Card) {
             <div  className='select-container'>
             <form action="">
                 <select name="cars" id="select">
-                   { coins.map((coin,index)=>{
+                   { chains.map((coin,index)=>{
                         return <option value={coin[0]}>{coin[0]}</option>
                    })}
                 </select>
@@ -39,17 +43,20 @@ export default function Card({title, button}:Card) {
                 <input type="submit" value="Submit" /> */}
                 </form>
 
-                <div className="amount">
-                {button=='Supply'? <input type='text' onChange={e=>setInput(Number(e))} /> : 
-                    <p>Amount : {fetchMarketData('usdt')}</p>
-                }
+                <div className="input-container">
+                    {button=='Supply'? <input type='text' placeholder='0' onChange={e=>setInput(Number(e.target.value))} /> :
+                    <div className='amount'> 
+                        <p>Amount : {input * Number(fetchMarketData('usdt'))}</p>
+                        {/* <button >Borrow </button> */}
+                    </div>
+                    }
                 </div>
                 
             </div>
 
             <div className='coin-head'  style={{maxWidth:'65%',justifyContent:'space-evenly',fontWeight:500}}>
                 <p>Asset</p>
-                <p>Balance</p>
+                <p>{button=='Supply'? 'Balance':'Available'}</p>
                 <p>APY</p>
                     
             </div>

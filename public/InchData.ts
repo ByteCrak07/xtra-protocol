@@ -31,5 +31,5 @@ export function fetchMarketData(token:'usdt'){
             return price.toString();
         })
         .catch(console.log);
-        return '0';
-    }
+    return 0;
+}
