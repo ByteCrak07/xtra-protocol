@@ -1,7 +1,7 @@
 const {Web3} = require('web3');
 const { BigNumber } = require('ethers');
 
-const yourInfuraKey = 'add your key here';
+const yourInfuraKey = 'e644632d9fef42b2a72f6129dcb33d0a';
 const web3 = new Web3(`https://mainnet.infura.io/v3/${yourInfuraKey}`);
 
 // eslint-disable-next-line max-len
