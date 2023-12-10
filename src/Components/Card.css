@@ -93,7 +93,7 @@ input[type=text]{
 .input-containert{
     display: flex;
     text-align: center;
-    height: 6vh;
+    max-height: 6vh;
     justify-content: center;
     align-items: center;
 }

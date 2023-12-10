@@ -17,8 +17,13 @@ interface Card{
 
 const coins = [
     ['eth',0, 3],
-    ['matic',0, 2],
+    ['matic',1, 2],
     ['link',0, 0.6]
+]
+const borrow_coins = [
+    ['eth',100, 4],
+    ['matic',100, 3],
+    ['link',100, 2]
 ]
 const chains = [
     ['Ethereum'],
@@ -44,9 +49,15 @@ export default function Card({title, button}:Card) {
                 </form>
 
                 <div className="input-container">
-                    {button=='Supply'? <input type='text' placeholder='0' onChange={e=>setInput(Number(e.target.value))} /> :
+                    {button=='Supply'? 
+                    // <input type='text' placeholder='0' onChange={e=>{
+                    //     setInput(Number(e.target.value));
+                    //     console.log(e.target.value);
+                    // }} /> 
+                    <div className='amount'></div>
+                    :
                     <div className='amount'> 
-                        <p>Amount : {input * Number(fetchMarketData('usdt'))}</p>
+                        <p>Amount : {input * fetchMarketData('usdt')}</p>
                         {/* <button >Borrow </button> */}
                     </div>
                     }
@@ -61,7 +72,23 @@ export default function Card({title, button}:Card) {
                     
             </div>
             {
+                button == 'Supply'?
+
                 coins.map((coin,index)=>{
+                    
+                    return <div className='coin-data'>
+                        <h3>{coin[0]}</h3>
+                        <div className='coin'>
+                            <p>{coin[1]}</p>
+                            <p>{coin[2]}%</p>
+                        </div>
+                       
+                        <button className={button=='Supply'?'supplyButton button':'borrowButton button'}>{button}</button>
+                    </div>;
+                    
+                })
+                :
+                borrow_coins.map((coin,index)=>{
                     
                     return <div className='coin-data'>
                         <h3>{coin[0]}</h3>

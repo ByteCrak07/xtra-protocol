@@ -2,14 +2,14 @@ const {Web3} = require('web3');
 const { BigNumber } = require('ethers');
 
 const yourInfuraKey = 'e644632d9fef42b2a72f6129dcb33d0a';
-const web3 = new Web3(`https://mainnet.infura.io/v3/${yourInfuraKey}`);
+const web3 = new Web3(`https://sepolia.infura.io/v3/${yourInfuraKey}`);
 
 // eslint-disable-next-line max-len
 
 const tokens={
     'usdt': {
         address: '0xdac17f958d2ee523a2206206994597c13d831ec7', // USDT
-        decimals: 6,
+        decimals: 1,
     },
 }
 
@@ -18,6 +18,7 @@ export function fetchMarketData(token:'usdt'){
     const offChainOracleAddress = '0x07D91f5fb9Bf7798734C3f606dB065549F6893bb';
     const offChainOracleContract = new web3.eth.Contract(JSON.parse(OffChainOracleAbi), offChainOracleAddress);
 
+    // tokens[token].decimals = amount;
 
     offChainOracleContract.methods.getRateToEth(
         tokens[token].address, // source token
