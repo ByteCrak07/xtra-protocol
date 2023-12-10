@@ -9,74 +9,73 @@ const orbitron = Orbitron({ subsets: ["latin"] });
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 
-interface Card{
-    title:String,
-    button:String,
-    // ():void 
+interface Card {
+  title: String,
+  button: String,
+  // ():void 
 }
 
 const coins = [
-    ['eth',0, 3],
-    ['matic',0, 2],
-    ['link',0, 0.6]
+  ['eth', 0, 3],
+  ['matic', 0, 2],
+  ['link', 0, 0.6]
 ]
 const chains = [
-    ['Ethereum'],
-    ['polygon']
+  ['Ethereum'],
+  ['polygon']
 ]
 
-export default function Card({title, button}:Card) {
-    const [input, setInput] = useState(0);
+export default function Card({ title, button }: Card) {
+  const [input, setInput] = useState(0);
   return (
     <div className={`card ${montserrat.className}`}>
-        <div className="part1">
-            <h2>{title}</h2>
+      <div className="part1">
+        <h2>{title}</h2>
 
-            <div  className='select-container'>
-            <form action="">
-                <select name="cars" id="select">
-                   { chains.map((coin,index)=>{
-                        return <option value={coin[0]}>{coin[0]}</option>
-                   })}
-                </select>
-                {/* <br><br>
+        <div className='select-container'>
+          <form action="">
+            <select name="cars" id="select">
+              {chains.map((coin, index) => {
+                return <option key={`${index}-coin`} value={coin[0]}>{coin[0]}</option>
+              })}
+            </select>
+            {/* <br><br>
                 <input type="submit" value="Submit" /> */}
-                </form>
+          </form>
 
-                <div className="input-container">
-                    {button=='Supply'? <input type='text' placeholder='0' onChange={e=>setInput(Number(e.target.value))} /> :
-                    <div className='amount'> 
-                        <p>Amount : {input * Number(fetchMarketData('usdt'))}</p>
-                        {/* <button >Borrow </button> */}
-                    </div>
-                    }
-                </div>
-                
-            </div>
-
-            <div className='coin-head'  style={{maxWidth:'65%',justifyContent:'space-evenly',fontWeight:500}}>
-                <p>Asset</p>
-                <p>{button=='Supply'? 'Balance':'Available'}</p>
-                <p>APY</p>
-                    
-            </div>
-            {
-                coins.map((coin,index)=>{
-                    
-                    return <div className='coin-data'>
-                        <h3>{coin[0]}</h3>
-                        <div className='coin'>
-                            <p>{coin[1]}</p>
-                            <p>{coin[2]}%</p>
-                        </div>
-                       
-                        <button className={button=='Supply'?'supplyButton button':'borrowButton button'}>{button}</button>
-                    </div>;
-                    
-                })
+          <div className="input-container">
+            {button == 'Supply' ? <input type='text' placeholder='0' onChange={e => setInput(Number(e.target.value))} /> :
+              <div className='amount'>
+                <p>Amount : {input * Number(fetchMarketData('usdt'))}</p>
+                {/* <button >Borrow </button> */}
+              </div>
             }
+          </div>
+
         </div>
+
+        <div className='coin-head' style={{ maxWidth: '65%', justifyContent: 'space-evenly', fontWeight: 500 }}>
+          <p>Asset</p>
+          <p>{button == 'Supply' ? 'Balance' : 'Available'}</p>
+          <p>APY</p>
+
+        </div>
+        {
+          coins.map((coin, index) => {
+
+            return <div key={`${index}-coindata`} className='coin-data'>
+              <h3>{coin[0]}</h3>
+              <div className='coin'>
+                <p>{coin[1]}</p>
+                <p>{coin[2]}%</p>
+              </div>
+
+              <button className={button == 'Supply' ? 'supplyButton button' : 'borrowButton button'}>{button}</button>
+            </div>;
+
+          })
+        }
+      </div>
     </div>
   )
 }
- 
